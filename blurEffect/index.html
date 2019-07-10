@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blur effect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            max-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+        }
+
+        .con {
+            position: relative;
+            width: 320px;
+            border-radius:16px;
+            height: 300px;
+            border:1px solid #000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+
+        .con::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            filter: blur(8px);
+            background-image: url(posdesig.PNG);
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        
+        .des {
+            width: 200px;
+            height: 200px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            vertical-align: center;
+            margin-left: 18%;
+           
+            border-radius: 50%;
+            border:1px solid #000;
+            margin-top: 18%;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="con">
+            <img src="posdesig.PNG" class="des"></img>
+            
+        </div>
+    </section>
+</body>
+
+</html>
